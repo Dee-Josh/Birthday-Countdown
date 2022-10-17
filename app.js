@@ -20,7 +20,7 @@ const birthdaySongs = [
 ];
 
 btn.addEventListener('click', ()=>{
-    const audioSource = Math.trunc(Math.random()*10);
+    const audioSource = Math.trunc(Math.random()*10 + 1);
     audio.src = birthdaySongs[audioSource];
 
 
