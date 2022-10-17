@@ -26,7 +26,7 @@ const birthdaySongs = [
 
 playSongs.forEach((btn)=>{
     btn.addEventListener('click', ()=>{
-        const audioSource = Math.trunc(Math.random()*7 + 1);
+        const audioSource = Math.trunc(Math.random()*10);
         audio.src = birthdaySongs[audioSource];
         audio.play();
         console.log("Playing Song");
