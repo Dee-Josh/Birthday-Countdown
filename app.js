@@ -7,13 +7,16 @@ const btn = document.querySelector("#play-song")
 const audio = new Audio;
 
 const birthdaySongs = [
-    "./sounds/jaymikee_wonder-kilen-f-olorun-pe.mp3",
-    "./sounds/Jireh Elevation Worship & Maverick City.mp3",
-    "./sounds/Maranda_Willis_-_Nobody_Like_You_Lord-www.CeeNaija.com_.mp3",
-    "./sounds/Maverick_City_Ft_Joe_L_Barnes_Naomi_Raines_-_Promises.mp3",
-    "./sounds/TY_Bello_Tope_Alabi_-_Awa_Gbe_Oga(nicegospel.com).mp3",
-    "./sounds/yahweh.mp3",
-    "./sounds/ZOE_The_Life_of_Christ_Ft_Pastor_Iren.mp3"
+    "./sounds/1.mp3",
+    "./sounds/2.mp3",
+    "./sounds/3.mp3",
+    "./sounds/4.mp3",
+    "./sounds/5.mp3",
+    "./sounds/6.mp3",
+    "./sounds/7.mp3",
+    "./sounds/8.mp3",
+    "./sounds/9.mp3",
+    "./sounds/10.mp3"
 ];
 
 btn.addEventListener('click', ()=>{
