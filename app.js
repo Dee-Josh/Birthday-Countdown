@@ -2,7 +2,14 @@ const day = document.getElementById("day");
 const hour = document.getElementById("hour");
 const minute = document.getElementById("minute");
 const sec = document.getElementById("seconds");
-const btn = document.querySelector("#play-song")
+const btn = document.querySelector("#play-song");
+
+const dayP = document.querySelector("#day-p");
+const hourP = document.querySelector("#hour-p");
+const minuteP = document.querySelector("#minute-p");
+const secondsP = document.querySelector("#seconds-p");
+
+
 
 const audio = new Audio;
 
@@ -49,7 +56,7 @@ btn.addEventListener('click', ()=>{
 
 
 // Set the date we're counting down toz
-var countDownDate = new Date("Oct 23, 2022 00:00:00").getTime();
+var countDownDate = new Date("Dec 25, 2022 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -70,6 +77,31 @@ var x = setInterval(function() {
 //   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
 //   + minutes + "m " + seconds + "s ";
     // day.innerHTML = days;
+
+
+    if(day.textContent <= 1){
+        dayP.textContent = "DAY";
+    }else{
+        dayP.textContent = "DAYS";
+    }
+    if(hour.textContent <= 1){
+        hourP.textContent = "HOUR";
+    }else{
+        hourP.textContent = "HOURS";
+    }
+    if(minute.textContent <= 1){
+        minuteP.textContent = "MINUTE";
+    }else{
+        minuteP.textContent = "MINUTES";
+    }
+    if(sec.textContent <= 1){
+        secondsP.textContent = "SECOND";
+    }else{
+        secondsP.textContent = "SECONDS";
+    }
+
+
+
     if(String(days).length < 2) {
         day.innerHTML = `0${days}`;
     }else{
