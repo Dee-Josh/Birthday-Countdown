@@ -4,6 +4,11 @@ const hour = document.getElementById("hour");
 const minute = document.getElementById("minute");
 const sec = document.getElementById("seconds");
 
+const dayP = document.querySelector("#day-p");
+const hourP = document.querySelector("#hour-p");
+const minuteP = document.querySelector("#minute-p");
+const secondsP = document.querySelector("#seconds-p");
+
 const playSongs = document.querySelectorAll(".birthday-img-btn");
 const stopSong = document.querySelector(".stop-music");
 
@@ -86,6 +91,28 @@ var x = setInterval(function() {
     }else{
         sec.textContent = seconds
     }
+
+    if(day.textContent <= 1){
+        dayP.textContent = "DAY";
+    }else{
+        dayP.textContent = "DAYS";
+    }
+    if(hour.textContent <= 1){
+        hourP.textContent = "HR";
+    }else{
+        hourP.textContent = "HRS";
+    }
+    if(minute.textContent <= 1){
+        minuteP.textContent = "MIN";
+    }else{
+        minuteP.textContent = "MINS";
+    }
+    if(sec.textContent <= 1){
+        secondsP.textContent = "SEC";
+    }else{
+        secondsP.textContent = "SECS";
+    }
+
 
 
     
