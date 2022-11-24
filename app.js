@@ -126,6 +126,10 @@ var x = setInterval(function() {
         sec.textContent = seconds
     }
 
+    if (audio.currentTime === 0){
+        btn.textContent = "Play Song"; 
+        console.log("HHHH");
+    }
 
     
 
@@ -137,3 +141,5 @@ var x = setInterval(function() {
     
   }
 }, 1000);
+
+console.log(audio);

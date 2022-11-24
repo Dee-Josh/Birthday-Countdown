@@ -12,6 +12,13 @@ const secondsP = document.querySelector("#seconds-p");
 const playSongs = document.querySelectorAll(".birthday-img-btn");
 const stopSong = document.querySelector(".stop-music");
 
+// FOR GIFT
+
+const gift = document.querySelector(".gift-image");
+
+const popup = document.querySelector(".gift-popup");
+const overlay = document.querySelector(".overlay");
+
 const audio = new Audio;
 
 const birthdaySongs = [
@@ -43,6 +50,8 @@ stopSong.addEventListener('click', ()=>{
     audio.currentTime = 0;
 })
 
+let distance;
+
 
 
 
@@ -56,7 +65,7 @@ var x = setInterval(function() {
   var now = new Date().getTime();
 
   // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+  distance = countDownDate - now;
 
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -127,6 +136,25 @@ var x = setInterval(function() {
 }, 1000);
 
 
+// FOR GIFT
+
+
+gift.addEventListener('click', ()=>{
+
+    // gift.style.animationName = "none";
+
+    if (distance < 1){
+        alert("Dear Celebrant, wait till your birthday to claim the gift");
+        
+    }else{
+        // Use a link to take her to another page where she claim her gift   Or Use a pop up display
+
+        overlay.style.display = "block";
+        popup.style.display = "block";
+    }
+})
+
+
 // const display = document.querySelector(".display");
 // const hidden = document.querySelectorAll(".hidden")
 
@@ -144,4 +172,6 @@ var x = setInterval(function() {
 //     })
 //     e.stopPropagation();
 // })
+
+
 

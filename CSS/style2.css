@@ -223,12 +223,11 @@ body{
 
 
 .footer {
-    padding: 0px 10px;
+    padding: 20px 10px;
     background-color: rgb(3, 32, 32);
     text-align: center;
     color: white;
     font-size: 1.2rem;
-    padding-block: 20px;
     border-top: 1px solid rgb(24, 219, 203);
 }
   
@@ -290,6 +289,63 @@ body{
 .display:hover{
     cursor: pointer;
 } */
+
+/* GIFT CONTAINER */
+
+.gift-container{
+    background-color: rgb(3, 32, 32);
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.gift-image{
+    margin: 15px;
+    /* width: 50%; */
+    height: 130px;
+    transition: all 0.3s;
+    /* border: 1px solid green; */
+    /* filter: invert(0); */
+    animation-name: gift;
+    animation: gift 3s ease-in-out 0s infinite normal forwards
+}
+
+.gift-image:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
+
+@keyframes gift {
+    0%{
+        scale: .9;
+    }100%{
+        scale: 1.1;
+    }
+}
+
+/* GIFT SECTION DISPLAY */
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.548);
+    display: none;
+}
+
+.gift-popup{
+    background-color: rgb(4, 29, 21);
+    color: white;
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid aqua;
+    text-align: center;
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, -0%);
+    padding: 20px;
+}
 
 
 

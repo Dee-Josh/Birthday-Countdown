@@ -236,12 +236,13 @@ body{
 
 
 .footer {
-    padding: 0px 10px;
+    height: 10vh;
+    padding: 20px 10px;
     background-color: rgb(3, 32, 32);
     text-align: center;
     color: white;
     font-size: 1.2rem;
-    padding-block: 20px;
+    /* padding: 20px; */
     border-top: 1px solid rgb(24, 219, 203);;
 }
   
