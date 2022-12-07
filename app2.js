@@ -1,4 +1,4 @@
-
+const countdownContainer = document.querySelector(".countdown-container");
 const day = document.getElementById("day");
 const hour = document.getElementById("hour");
 const minute = document.getElementById("minute");
@@ -11,6 +11,22 @@ const secondsP = document.querySelector("#seconds-p");
 
 const playSongs = document.querySelectorAll(".birthday-img-btn");
 const stopSong = document.querySelector(".stop-music");
+
+
+
+
+const picture = document.querySelectorAll(".birthday-img");
+const pictures = document.querySelector(".birthday-img");
+const header = document.querySelector(".header");
+const gallery = document.querySelector(".gallery-display-container");
+const xmarks = document.querySelectorAll(".fa-xmark");
+
+const homeButton = document.querySelector(".back-to-home");
+const countD = document.querySelector(".countdown-container");
+
+const happyMarquee = document.querySelector(".happy-marquee")
+const confecti = document.querySelector(".overall")
+
 
 const audio = new Audio;
 
@@ -47,7 +63,8 @@ stopSong.addEventListener('click', ()=>{
 
 
 // Set the date we're counting down toz
-var countDownDate = new Date("Dec 25, 2022 00:00:00").getTime();
+var countDownDate = new Date("Dec 13, 2022 00:00:00").getTime();
+// var countDownDate = new Date("Dec 1, 2022 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -122,9 +139,111 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 1) {
     clearInterval(x);
-    
+
+    confecti.style.display = "block";
+    happyMarquee.style.opacity = "1";
+    countdownContainer.style.display = "none";
   }
 }, 1000);
+
+
+let pico;
+
+let display = "true";
+let displayImage;
+
+
+picture.forEach((pic)=>{
+    pic.addEventListener("click", ()=>{
+
+        if (display === "true"){
+            console.log("vjjvjv");
+            displayImage = ()=>{
+                pico = pic;
+                    
+                console.log(pic);
+                pic.style.position = "absolute";
+                pic.style.left = "50%";
+                pic.style.transform = "translate(-50%, -0%)"
+                pic.style.top = "0";
+                pic.style.height = "100vh";
+                if(window.screenX > 300){
+                    pic.style.width = "100%"; 
+                }else{
+                    pic.style.maxWidth = "fit-content";
+                    pic.style.width = "100%";
+                }
+                pic.style.maxHeight = "100vh";
+                
+                pic.style.zIndex = "1";
+                document.body.style.overflow = "hidden";
+            
+            
+                const xmark = pic.querySelector(".fa-xmark");
+                xmark.style.opacity = 1;
+                console.log(xmark);
+                display = "false";
+                header.style.opacity = "0";
+                homeButton.style.display = "none"; 
+                countD.style.display = "none"; 
+            }
+        }else{
+            displayImage = ()=>{
+                console.log("Nothing");
+                display = "true";
+                window.screenTop = 2000;
+            }
+        }
+
+    
+
+        displayImage();
+
+        
+
+    })
+
+    // xmarks.forEach((mark)=>{
+    //     mark.addEventListener("click", ()=>{
+    //         pic.style.position = "sticky";
+    //         pic.style.left = "";
+    //         pic.style.top = "";
+    //         pic.style.height = "";
+    //         pic.style.width = "";
+    //         pic.style.zIndex = "";
+    //         document.body.style.overflow = "scroll";
+    //         // header.style.display = "none";
+    
+    
+    //         const xmark = pic.querySelector(".fa-xmark");
+    //         xmark.style.opacity = 0;
+    //         console.log("hdjdjdj");
+    //     })
+    // })
+})
+
+xmarks.forEach((mark)=>{
+    mark.addEventListener("click", ()=>{
+        pico.style.position = "relative";
+        // pico.style.left = "";
+        // pico.style.top = "";
+        pico.style.height = "";
+        pico.style.width = "";
+        pico.style.zIndex = "";
+        document.body.style.overflow = "scroll";
+        // header.style.display = "none";
+
+
+        const xmark = pico.querySelector(".fa-xmark");
+        xmark.style.opacity = 0;
+        console.log("hdjdjdj");
+        header.style.opacity = "1";
+        homeButton.style.display = "block"; 
+        countD.style.display = "flex"; 
+    })
+})
+
+
 
 
 // const display = document.querySelector(".display");
@@ -145,3 +264,29 @@ var x = setInterval(function() {
 //     e.stopPropagation();
 // })
 
+
+
+const images = document.querySelectorAll(".main-img");
+i = 1;
+// const imageInfo = document.querySelectorAl
+images.forEach(img => {
+    console.log(img.src);
+    img.src = `./spec/${i}.JPG`;
+
+
+    // let firstNode;
+
+    // if (i == 1) {
+    //     console.log("This must be true");
+    //     firstNode= img.parentNode;
+    //     firstNode.parentNode.querySelector(".image-info").textContent = "Celebrant Taking a Pose";
+    // }else if (i ==2){
+    //     firstNode= img.parentNode;
+    //     firstNode.parentNode.querySelector(".image-info").textContent = "Celebrant Taking a Pose";
+    // }
+
+    i++;
+    console.log(i);
+
+    
+});

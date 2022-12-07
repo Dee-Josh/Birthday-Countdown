@@ -1,3 +1,13 @@
+const countdownContainer = document.querySelector(".countdown-container");
+const leftContainer = document.querySelector(".left-container");
+const rightContainer = document.querySelector(".right-container");
+const rightContent = document.querySelector(".right-content");
+const changeDetails = document.querySelector(".change-details");
+const changeDetails2 = document.querySelector(".change-details-2");
+const memoryBtn = document.querySelector("#memories");
+const specialAudio = document.querySelector(".special-audio");
+
+
 const day = document.getElementById("day");
 const hour = document.getElementById("hour");
 const minute = document.getElementById("minute");
@@ -8,6 +18,10 @@ const dayP = document.querySelector("#day-p");
 const hourP = document.querySelector("#hour-p");
 const minuteP = document.querySelector("#minute-p");
 const secondsP = document.querySelector("#seconds-p");
+
+
+const wishContainer = document.querySelector(".birthday-wish");
+
 
 
 
@@ -56,7 +70,8 @@ btn.addEventListener('click', ()=>{
 
 
 // Set the date we're counting down toz
-var countDownDate = new Date("Dec 25, 2022 00:00:00").getTime();
+var countDownDate = new Date("Dec 13, 2022 00:00:00").getTime();
+var countDownDate = new Date("Dec 1, 2022 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -126,6 +141,10 @@ var x = setInterval(function() {
         sec.textContent = seconds
     }
 
+    if (audio.currentTime === 0){
+        btn.textContent = "Play Song"; 
+        console.log("HHHH");
+    }
 
     
 
@@ -134,6 +153,26 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 1) {
     clearInterval(x);
+
+    wishContainer.innerHTML = "Happy Birthday To the Best Dad in the Whole World 🎈🎈🎈. <br> May you live more year on this earth to enjoy the fruit of your labour🎁🎁🎁.";
+
+    countdownContainer.style.display = "none";
+    leftContainer.style.display = "none";
+    rightContainer.style.width = "100vw";
+    rightContainer.classList.add("after-date");
+    rightContent.style.width = "100%";
+    rightContainer.style.textAlign = "center";
+    changeDetails.textContent = "Happy Birthday";
+    changeDetails.style.fontSize = "35px";
+    rightContent.style.textAlign = "center";
+    memoryBtn.style.marginTop = "10%";
+    specialAudio.style.display = "inline";
+
+    changeDetails2.textContent = "To Pastor Professor Sunday Dada.";
+
+    
     
   }
 }, 1000);
+
+console.log(audio);
