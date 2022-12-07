@@ -26,6 +26,11 @@ body{
     /* background-color: green; */
 }
 
+
+button.special-audio{
+    display: none;
+}
+
 .container{
     position: relative;
     /* background-color: green; */
@@ -243,12 +248,11 @@ body{
 
 
 .footer {
-    padding: 0px 10px;
+    padding: 20px 10px;
     background-color: rgb(3, 32, 32);
     text-align: center;
     color: white;
     font-size: 1.2rem;
-    padding-block: 20px;
     border-top: 1px solid rgb(24, 219, 203);;
 }
   
@@ -431,11 +435,6 @@ body{
         margin-top: 20%;
         font-size: 14px;
     }
-
-    .special-audio{
-        display: none;
-    }
-
 
 }
 

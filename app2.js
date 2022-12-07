@@ -51,12 +51,27 @@ playSongs.forEach((btn)=>{
         audio.src = birthdaySongs[audioSource];
         audio.play();
         console.log("Playing Song");
+        stopSong.textContent = "Stop Song";
+        playing = false;
     })
 })
 
+let playing = true;
+
 stopSong.addEventListener('click', ()=>{
-    audio.pause();
-    audio.currentTime = 0;
+
+    if(playing){
+        const audioSource = Math.trunc(Math.random()*10);
+        audio.src = birthdaySongs[audioSource];
+        audio.play();
+        stopSong.textContent = "Stop Song";
+        playing = false;
+    }else{
+        audio.pause();
+        audio.currentTime = 0;
+        stopSong.textContent = "Play Song";
+        playing = true;
+    }
 })
 
 
@@ -64,7 +79,6 @@ stopSong.addEventListener('click', ()=>{
 
 // Set the date we're counting down toz
 var countDownDate = new Date("Dec 13, 2022 00:00:00").getTime();
-// var countDownDate = new Date("Dec 1, 2022 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -81,10 +95,7 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
-//   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-//   + minutes + "m " + seconds + "s ";
-    // day.innerHTML = days;
+
     if(String(days).length < 2) {
         day.innerHTML = `0${days}`;
     }else{
@@ -203,23 +214,7 @@ picture.forEach((pic)=>{
 
     })
 
-    // xmarks.forEach((mark)=>{
-    //     mark.addEventListener("click", ()=>{
-    //         pic.style.position = "sticky";
-    //         pic.style.left = "";
-    //         pic.style.top = "";
-    //         pic.style.height = "";
-    //         pic.style.width = "";
-    //         pic.style.zIndex = "";
-    //         document.body.style.overflow = "scroll";
-    //         // header.style.display = "none";
-    
-    
-    //         const xmark = pic.querySelector(".fa-xmark");
-    //         xmark.style.opacity = 0;
-    //         console.log("hdjdjdj");
-    //     })
-    // })
+    // SOMETHING DELETED
 })
 
 xmarks.forEach((mark)=>{
@@ -239,54 +234,11 @@ xmarks.forEach((mark)=>{
         console.log("hdjdjdj");
         header.style.opacity = "1";
         homeButton.style.display = "block"; 
-        countD.style.display = "flex"; 
+        countD.style.display = "flex";  
+        stopSong.style.opacity = 1;
     })
 })
 
+// SOMETHING DELETED
 
-
-
-// const display = document.querySelector(".display");
-// const hidden = document.querySelectorAll(".hidden")
-
-
-// display.addEventListener('click', (e)=>{
-//     hidden.forEach((hid)=>{
-//         hid.classList.toggle('hidden');
-//     })
-//     e.stopPropagation();
-// })
-
-// document.body.addEventListener('click', (e)=>{
-//     hidden.forEach((hid)=>{
-//         hid.classList.add('hidden');
-//     })
-//     e.stopPropagation();
-// })
-
-
-
-const images = document.querySelectorAll(".main-img");
-i = 1;
-// const imageInfo = document.querySelectorAl
-images.forEach(img => {
-    console.log(img.src);
-    img.src = `./spec/${i}.JPG`;
-
-
-    // let firstNode;
-
-    // if (i == 1) {
-    //     console.log("This must be true");
-    //     firstNode= img.parentNode;
-    //     firstNode.parentNode.querySelector(".image-info").textContent = "Celebrant Taking a Pose";
-    // }else if (i ==2){
-    //     firstNode= img.parentNode;
-    //     firstNode.parentNode.querySelector(".image-info").textContent = "Celebrant Taking a Pose";
-    // }
-
-    i++;
-    console.log(i);
-
-    
-});
+// SOMETHING DELETED
