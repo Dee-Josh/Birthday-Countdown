@@ -451,9 +451,14 @@ button.special-audio{
         margin-top: 1rem;
         font-size: 28px;
     }
+    
     .change-details-2{
         font-size: 25px;
         margin-bottom: 10px;
+    }
+
+    .birthday-wish p{
+        font-size: 14px;
     }
 
     .countdown-container{
