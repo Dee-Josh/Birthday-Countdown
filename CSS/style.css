@@ -453,6 +453,7 @@ button.special-audio{
     }
     .change-details-2{
         font-size: 25px;
+        margin-bottom: 10px;
     }
 
     .countdown-container{
@@ -556,7 +557,8 @@ button.special-audio{
 @media screen and (max-width: 448px){
 
     .btn {
-        margin: 20px 3px;
+        margin: 18px 3px;
+        margin-bottom: 0;
         max-width: fit-content;
         outline: none;
         border: none;

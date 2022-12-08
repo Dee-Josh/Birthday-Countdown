@@ -49,6 +49,7 @@ body{
     color: white;
     font-style: italic;
     margin-top: 20px;
+    margin-bottom: 120px;
 }
 
 .back-to-home a{
@@ -363,7 +364,7 @@ body{
     }
 
     .header__content h1{
-        font-size: 38px;
+        font-size: 32px;
     }
     
     .header__content h2{
@@ -373,6 +374,11 @@ body{
 }
   
 @media (max-width: 450px) {
+
+.home-arrow{
+    display: none;
+}
+
     .gallery-display-container .images {
       display: flex;
       flex-direction: column;
