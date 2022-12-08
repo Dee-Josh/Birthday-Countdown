@@ -447,6 +447,14 @@ button.special-audio{
 
 
 @media screen and (max-width: 555px){
+    .right-container h1{
+        margin-top: 1rem;
+        font-size: 33px;
+    }
+    .change-details-2{
+        font-size: 25px;
+    }
+
     .countdown-container{
         border: 2px solid white;
         border-radius: 50%;
