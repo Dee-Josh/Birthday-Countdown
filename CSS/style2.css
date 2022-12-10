@@ -163,7 +163,7 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
 
     padding: 12px;
     border-radius: 10px;
@@ -171,7 +171,7 @@ body{
     outline: none;
     background-color: rgb(24, 219, 203);
     /* color: white; */
-    font-weight: bold;
+    font-weight: bold; 
     font-size: 18px;
     opacity: 0;
     transition: all .3s;
