@@ -25,7 +25,7 @@ const homeButton = document.querySelector(".back-to-home");
 const countD = document.querySelector(".countdown-container");
 
 const happyMarquee = document.querySelector(".happy-marquee")
-const confecti = document.querySelector(".overall")
+const confecti = document.querySelector(".overall");
 
 
 const audio = new Audio;
@@ -150,10 +150,12 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 1) {
     clearInterval(x);
+    alert("It's your Birthday Sir");
 
     confecti.style.display = "block";
     happyMarquee.style.opacity = "1";
     countdownContainer.style.display = "none";
+    document.body.style.overflowX = "hidden";
   }
 }, 1000);
 

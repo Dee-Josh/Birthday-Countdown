@@ -175,3 +175,30 @@ var x = setInterval(function() {
 }, 1000);
 
 console.log(audio);
+
+const newAudio = new Audio;
+
+const specAudio = [
+    "./sounds/1.mp3",
+    "./sounds/2.mp3",
+    "./sounds/3.mp3",
+    "./sounds/4.mp3"
+];
+let myaudio = 1;
+specialAudio.addEventListener("click", ()=>{
+    newAudio.src = specAudio[myaudio];
+    newAudio.play();
+    if (myaudio == 1) {
+        alert("This Audio is from your beloved wife. Click on special audio again to here from another beloved.")
+    }else if (myaudio == 2){
+        alert("This Audio is from your daughter. Click on special audio again to here from another beloved.")
+    }else if (myaudio == 3){
+        alert("This Audio is from your Son, Joshua. Click on special audio again to here from another beloved.")
+    }else if (myaudio == 4){
+        alert("This Audio is from your Son, Toluwa. Click on special audio again to play first audio.")
+    }
+    myaudio++;
+    if (myaudio > 4) {
+        myaudio = 1;
+    }
+})
