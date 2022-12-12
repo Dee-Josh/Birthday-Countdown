@@ -70,7 +70,7 @@ btn.addEventListener('click', ()=>{
 
 
 // Set the date we're counting down toz
-var countDownDate = new Date("Dec 3, 2022 00:00:00").getTime();
+var countDownDate = new Date("Dec 13, 2022 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -194,9 +194,9 @@ specialAudio.addEventListener("click", ()=>{
         alert("This Audio is from your daughter. Click on special audio again to here from another beloved.")
     }else if (myaudio == 2){
         alert("This Audio is from your Son, Joshua. Click on special audio again to here from another beloved.")
-    // }else if (myaudio == 3){
-    //     alert("This Audio is from your Son, Toluwa. Click on special audio again to play first audio.")
-    // }
+    }else if (myaudio == 3){
+        alert("This Audio is from your Son, Toluwa. Click on special audio again to play first audio.")
+    }
     myaudio++;
     if (myaudio > 2) {
         myaudio = 0;
