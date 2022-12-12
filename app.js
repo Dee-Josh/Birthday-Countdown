@@ -70,7 +70,7 @@ btn.addEventListener('click', ()=>{
 
 
 // Set the date we're counting down toz
-var countDownDate = new Date("Dec 13, 2022 00:00:00").getTime();
+var countDownDate = new Date("Dec 3, 2022 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -179,26 +179,26 @@ console.log(audio);
 const newAudio = new Audio;
 
 const specAudio = [
-    "./sounds/1.mp3",
-    "./sounds/2.mp3",
-    "./sounds/3.mp3",
-    "./sounds/4.mp3"
+    "./sounds/audio1.mp3",
+    "./sounds/audio2.mp3",
+    "./sounds/audio3.mp3",
+    "./sounds/audio4.mp3"
 ];
-let myaudio = 1;
+let myaudio = 0;
 specialAudio.addEventListener("click", ()=>{
     newAudio.src = specAudio[myaudio];
     newAudio.play();
-    if (myaudio == 1) {
+    if (myaudio == 0) {
         alert("This Audio is from your beloved wife. Click on special audio again to here from another beloved.")
-    }else if (myaudio == 2){
+    }else if (myaudio == 1){
         alert("This Audio is from your daughter. Click on special audio again to here from another beloved.")
-    }else if (myaudio == 3){
+    }else if (myaudio == 2){
         alert("This Audio is from your Son, Joshua. Click on special audio again to here from another beloved.")
-    }else if (myaudio == 4){
-        alert("This Audio is from your Son, Toluwa. Click on special audio again to play first audio.")
-    }
+    // }else if (myaudio == 3){
+    //     alert("This Audio is from your Son, Toluwa. Click on special audio again to play first audio.")
+    // }
     myaudio++;
-    if (myaudio > 4) {
-        myaudio = 1;
+    if (myaudio > 2) {
+        myaudio = 0;
     }
 })
