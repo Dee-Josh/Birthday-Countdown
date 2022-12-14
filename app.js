@@ -184,7 +184,7 @@ const specAudio = [
     "./sounds/audio3.mp3",
     "./sounds/audio4.mp3"
 ];
-let myaudio = 0;
+let myaudio = 1;
 specialAudio.addEventListener("click", ()=>{
     newAudio.src = specAudio[myaudio];
     newAudio.play();
@@ -199,6 +199,6 @@ specialAudio.addEventListener("click", ()=>{
     }
     myaudio++;
     if (myaudio > 2) {
-        myaudio = 0;
+        myaudio = 1;
     }
 })
