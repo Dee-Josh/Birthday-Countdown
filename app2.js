@@ -152,7 +152,6 @@ var x = setInterval(function() {
     clearInterval(x);
     alert("It's your Birthday Sir");
 
-    confecti.style.display = "block";
     happyMarquee.style.opacity = "1";
     countdownContainer.style.display = "none";
     document.body.style.overflowX = "hidden";
