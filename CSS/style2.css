@@ -24,6 +24,7 @@ body{
     position: relative;
     width: 100%;
     background-color: rgb(3, 32, 32);
+    overflow-x: hidden;
 }
 
 .header{
